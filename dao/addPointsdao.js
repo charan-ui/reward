@@ -1,6 +1,6 @@
 
 
- let postPoints = require('../transactions.json');
+let postPoints = require('../transactions.json');
 
 //loading the transaction Helper file
 const transactionHelper = require('../helpers/transactionHelper');
@@ -26,17 +26,16 @@ async function fetchUserDao(query) {
  * @param {object} query has the userId to which the points has to be inserted
  * @returns {Number} index of that user
  */
- async function findUserPositionDao(query){
-  return new Promise(async function (resolve,reject)
-  {
-    try{
-    const index = postPoints.users.findIndex(point => point.userId === query.userId);
-    resolve(index);
-    }catch(error){
-    reject(error);
+async function findUserPositionDao(query) {
+  return new Promise(async function (resolve, reject) {
+    try {
+      const index = postPoints.users.findIndex(point => point.userId === query.userId);
+      resolve(index);
+    } catch (error) {
+      reject(error);
     }
   })
- }
+}
 
 
 /**
@@ -44,17 +43,17 @@ async function fetchUserDao(query) {
  * @param {object} validUser in our service datasource
  * @param {Number} position of our user in the service datasource array
  */
-async function insertPointsForUser(pointsPayerObject,findUser,userPosition){
-return new Promise(async function(resolve,reject){
+async function insertPointsForUser(pointsPayerObject, findUser, userPosition) {
+  return new Promise(async function (resolve, reject) {
 
-  try{
-     postPoints.users[userPosition].transactionDetails.push(pointsPayerObject);
-     transactionHelper.writeTransactionDetails(postPoints);
-     resolve({status:200});
-  }catch(error){
-     reject(error);
-  }
-})
+    try {
+      postPoints.users[userPosition].transactionDetails.push(pointsPayerObject);
+      transactionHelper.writeTransactionDetails(postPoints);
+      resolve({ status: 200 });
+    } catch (error) {
+      reject(error);
+    }
+  })
 
 
 }
