@@ -6,7 +6,7 @@ const router = require("express").Router();
 const addPointsService = require("../service/addPointsService");
 
 /**
- *
+ * Route for addPoints
  * @param {call back function} route entry point
  */
 router.post("/addPoints", async function (req, res) {
@@ -16,7 +16,6 @@ router.post("/addPoints", async function (req, res) {
     .then(result => {
       res.send(result);
     }).catch(error => {
-      console.log(error);
       res.status(500).send('error in add points service');
     })
 

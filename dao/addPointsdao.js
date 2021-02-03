@@ -1,6 +1,6 @@
 
-
-let postPoints = require('../transactions.json');
+//data
+let postPoints = require('../abc.json');
 
 //loading the transaction Helper file
 const transactionHelper = require('../helpers/transactionHelper');
@@ -43,9 +43,8 @@ async function findUserPositionDao(query) {
  * @param {object} validUser in our service datasource
  * @param {Number} position of our user in the service datasource array
  */
-async function insertPointsForUser(pointsPayerObject, findUser, userPosition) {
+async function insertPointsForNewPartnerForUser(pointsPayerObject, userPosition) {
   return new Promise(async function (resolve, reject) {
-
     try {
       postPoints.users[userPosition].transactionDetails.push(pointsPayerObject);
       transactionHelper.writeTransactionDetails(postPoints);
@@ -54,13 +53,48 @@ async function insertPointsForUser(pointsPayerObject, findUser, userPosition) {
       reject(error);
     }
   })
-
-
 }
+
+/**
+ * @param {Number} userPosition having user position
+ * @param {object} query having payer Name and points
+ * @returns {Number} index of that payer
+ */
+  async function retrievePayerPosition(userPosition,query) {
+    return new Promise(async function (resolve, reject) {
+      try {
+        const index = postPoints.users[userPosition].transactionDetails.findIndex(each => each.payer === query.payer)
+        resolve(index);
+      } catch (error) {
+        reject(error);
+      }
+    })
+}
+
+/**
+ * @param {Number} userPosition position of user in users array
+ * @param {Number} transactionDetailsWithRespectTopayer having payer position to updatepoints
+ * @param {object} query containing payer points
+ */
+async function updatePointsForOldPartnerForUser(userPosition, transactionDetailsWithRespectTopayer,query) {
+  return new Promise(async function (resolve, reject) {
+    try {
+      postPoints.users[userPosition].transactionDetails[transactionDetailsWithRespectTopayer].points = (postPoints.users[userPosition].transactionDetails[transactionDetailsWithRespectTopayer].points) + query.points ;
+      postPoints.users[userPosition].transactionDetails[transactionDetailsWithRespectTopayer].updatedAt = transactionHelper.transactionDate();
+      transactionHelper.writeTransactionDetails(postPoints);
+      resolve({ status: 200 });
+    } catch (error) {
+      reject(error);
+    }
+  })
+}
+
 
 
 module.exports = {
   fetchUserDao,
   findUserPositionDao,
-  insertPointsForUser
+  insertPointsForNewPartnerForUser,
+  retrievePayerPosition,
+  updatePointsForOldPartnerForUser
 }
