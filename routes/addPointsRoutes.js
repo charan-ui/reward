@@ -2,18 +2,24 @@
 //dependencies
 const router = require("express").Router();
 
+//import service layer
+const addPointsService = require("../service/addPointsService");
 
 /**
- * first test
+ *
+ * @param {call back function} route entry point
  */
+router.post("/addPoints", async function (req, res) {
+  //entering addPoints route
 
- router.get("/addPoints",async function (req,res){
+  //call the service layer
+  await addPointsService.addPointsParticularUserService(req)
+    .then(result => {
+      res.send(result);
+    }).catch(error => {
+      console.log(error);
+    })
 
-   res.send('success');
- })
-
-
-
-
+})
 
 module.exports = router;

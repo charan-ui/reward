@@ -1,15 +1,22 @@
-//imports
-const fileName = '../data/transaction.json';
-//loading the json data file
-let postPoints = require(fileName);
-//loading the transaction Helper file
-const transactionHelper = require('../helpers/transactionHelper');
 
 
-function addPointsParticularUserService(newPoints,){
+
+/**
+ *
+ * @param {Object} req body having details to add points to a particular
+ */
+
+async function addPointsParticularUserService(req) {
   //entering the add points function
-  return new Promise((resolve,reject)=>
-  {
+  return new Promise(async function (resolve, reject) {
+    //step:1 hit our service data store and retrieve the particular user
+    try {
+      const
+
+
+    } catch (error) {
+
+    }
 
 
   })
@@ -18,6 +25,6 @@ function addPointsParticularUserService(newPoints,){
 
 }
 
-module.exports={
+module.exports = {
   addPointsParticularUserService
 }
