@@ -51,8 +51,13 @@ To Build Web Services for:
 * Fetching The Points Remaining in Reward wallet
 
 ### Built With
+If you do not have node.js installed use below nodejs link to install it on your PC
 * [Nodejs](https://nodejs.org/en/)
 * [Express](https://expressjs.com/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
