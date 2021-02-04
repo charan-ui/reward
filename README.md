@@ -38,6 +38,7 @@
     <li><a href="#deductPoints">deduct Points</a></li>
     <li><a href="#fetchPoints">fetch Points</a></li>
     <li><a href="#contact">Contact</a></li>
+     <li><a href="#acknowledgements">Acknowledgements</a></li>
 
   </ol>
 </details>
