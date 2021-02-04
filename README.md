@@ -33,8 +33,8 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Using The Services</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#usingtheservices">Using The Services</a></li>
+    <li><a href="#addPoints">Add Points</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
@@ -76,8 +76,19 @@ This is an example of how to list things you need to use the software and how to
    After This you will see a log on your terminal like this  "Express server listening on port  1337"
    Indicating the the server is ready
 
-   ### usage
+   ### usingtheservices
 1. I Use Postman Client to use my REST Web Services , you are allowed to use any API Clients for this
    Purpose
    If you Have not Installed Postman on your device Please use the below URL For downloading it
    * [POSTMAN](https://www.postman.com/downloads/)
+
+   ### addPoints
+1. Request Screen shot
+<br />
+<p align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/addPointsRequest.png" alt="Logo" width="80" height="80">
+  </a>
+</p>
+
+   This is a Post Request and Payload required for this is shown in the above Image
