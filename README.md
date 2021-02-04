@@ -87,7 +87,7 @@ This is an example of how to list things you need to use the software and how to
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/addPointsRequest.png" alt="Logo" width="80" height="80">
+    <img src="images/addPointsRequest.png" alt="Logo" width="200" height="200">
   </a>
 </p>
 
