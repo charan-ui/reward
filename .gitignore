@@ -19,3 +19,6 @@ bin-release/
 
 #Dependency directories
 node_modules/
+
+# ds_store
+.DS_Store

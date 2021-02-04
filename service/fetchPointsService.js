@@ -6,6 +6,7 @@
 
 //load addPointsDao
 const addPointsDao = require('../dao/addPointsdao');
+const fetchPointsDao = require('../dao/fetchPointsDao');
 
 /**
  *
@@ -20,8 +21,8 @@ async function fetchPointsService(req) {
       //retrieve the position of the user
       const userPosition = await addPointsDao.findUserPositionDao({ userId: parseInt(req.query.userId) });
       //fetching the remaining points for a particular user
-
-
+      const returnFinalResult = await fetchPointsDao.fetchPointsServiceMemoryDao(userPosition);
+      resolve(returnFinalResult);
     } catch (error) {
      reject(error);
     }

@@ -7,7 +7,7 @@
 
 //import the file model of node
 const fs = require('fs');
-const fileName = 'abc.json'
+const fileName = 'serviceData.json'
 
 
 
