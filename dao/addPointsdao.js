@@ -6,7 +6,7 @@
  */
 
 //data
-let postPoints = require('../abc.json');
+let postPoints = require('../serviceData.json');
 
 //loading the transaction Helper file
 const transactionHelper = require('../helpers/transactionHelper');
