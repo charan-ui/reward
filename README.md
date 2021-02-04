@@ -72,3 +72,9 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
+3. In your Project Terminal run
+   ```sh
+   npm run dev
+   ```
+   After This you will see a log on your terminal like this  "Express server listening on port  1337"
+   Indicating the the server is ready
