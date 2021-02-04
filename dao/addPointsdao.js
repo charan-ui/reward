@@ -1,4 +1,10 @@
 
+/**
+ * @author Charan H M
+ * @CopyRights Rewards
+ * @Date FEB 4 , 2021
+ */
+
 //data
 let postPoints = require('../abc.json');
 
@@ -60,15 +66,15 @@ async function insertPointsForNewPartnerForUser(pointsPayerObject, userPosition)
  * @param {object} query having payer Name and points
  * @returns {Number} index of that payer
  */
-  async function retrievePayerPosition(userPosition,query) {
-    return new Promise(async function (resolve, reject) {
-      try {
-        const index = postPoints.users[userPosition].transactionDetails.findIndex(each => each.payer === query.payer)
-        resolve(index);
-      } catch (error) {
-        reject(error);
-      }
-    })
+async function retrievePayerPosition(userPosition, query) {
+  return new Promise(async function (resolve, reject) {
+    try {
+      const index = postPoints.users[userPosition].transactionDetails.findIndex(each => each.payer === query.payer)
+      resolve(index);
+    } catch (error) {
+      reject(error);
+    }
+  })
 }
 
 /**
@@ -76,10 +82,10 @@ async function insertPointsForNewPartnerForUser(pointsPayerObject, userPosition)
  * @param {Number} transactionDetailsWithRespectTopayer having payer position to updatepoints
  * @param {object} query containing payer points
  */
-async function updatePointsForOldPartnerForUser(userPosition, transactionDetailsWithRespectTopayer,query) {
+async function updatePointsForOldPartnerForUser(userPosition, transactionDetailsWithRespectTopayer, query) {
   return new Promise(async function (resolve, reject) {
     try {
-      postPoints.users[userPosition].transactionDetails[transactionDetailsWithRespectTopayer].points = (postPoints.users[userPosition].transactionDetails[transactionDetailsWithRespectTopayer].points) + query.points ;
+      postPoints.users[userPosition].transactionDetails[transactionDetailsWithRespectTopayer].points = (postPoints.users[userPosition].transactionDetails[transactionDetailsWithRespectTopayer].points) + query.points;
       postPoints.users[userPosition].transactionDetails[transactionDetailsWithRespectTopayer].updatedAt = transactionHelper.transactionDate();
       transactionHelper.writeTransactionDetails(postPoints);
       resolve({ status: 200 });
