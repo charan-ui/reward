@@ -1,3 +1,2 @@
 # reward
-
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][www.linkedin.com/in/charan-hm]
