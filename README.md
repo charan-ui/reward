@@ -35,7 +35,7 @@
     </li>
     <li><a href="#usingtheservices">Using The Services</a></li>
     <li><a href="#addPoints">Add Points</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#deductPoints">deduct Points</a></li>
   </ol>
 </details>
 
@@ -112,4 +112,34 @@ This is an example of how to list things you need to use the software and how to
    {
     "status": 200
    }
+   ```
+
+### deductPoints
+1. EndPoint
+   ```
+   http://localhost:1337/api/deductPoints
+   ```
+2. http Request Type
+   ```
+   PUT
+   ```
+3. Request Body
+   ```
+   {
+    "userId":1,
+    "deduct": 20
+   }
+   ```
+   1.  userId : unique Identifier for a user. all services are developed for one particular user
+   2.  TransactionDetails : Number of points to be deducted from that user
+
+4. Response if Succesful of after deduction returns the points deducted for that payer in user wallet
+   ```
+  [
+    {
+        "payer": "DANNON",
+        "deductedAmount": -20,
+        "deductedTime": "Thu Feb 04 2021 11:42:58 GMT-0500 (EST)"
+    }
+  ]
    ```
