@@ -82,7 +82,7 @@ This is an example of how to list things you need to use the software and how to
    If you Have not Installed Postman on your device Please use the below URL For downloading it
    * [POSTMAN](https://www.postman.com/downloads/)
 
-   ### addPoints
+### addPoints
 1. EndPoint
    ```
    http://localhost:1337/api/addPoints
