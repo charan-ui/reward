@@ -115,8 +115,9 @@ This is an example of how to list things you need to use the software and how to
    ```
 
 ### deductPoints
+
 1. EndPoint
-   ```
+    ```
    http://localhost:1337/api/deductPoints
    ```
 2. http Request Type
@@ -124,6 +125,7 @@ This is an example of how to list things you need to use the software and how to
    PUT
    ```
 3. Request Body
+
    ```
    {
     "userId":1,
