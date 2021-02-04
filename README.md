@@ -38,6 +38,8 @@
     <li><a href="#deductPoints">deduct Points</a></li>
     <li><a href="#fetchPoints">fetch Points</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+
 
   </ol>
 </details>
@@ -187,3 +189,11 @@ This is an example of how to list things you need to use the software and how to
    1. Name - Charan
    2. email - charanhm5991@gmail.com
    3. Project Link: [https://github.com/charan-ui/reward.git](https://github.com/charan-ui/reward.git)
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [GitHub Read ME Guide](https://github.com/othneildrew/Best-README-Template)
+* [Javascript MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [Express Documentation](https://expressjs.com/)
+* [Medium](https://medium.com/)
