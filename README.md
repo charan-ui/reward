@@ -38,7 +38,14 @@
     <li><a href="#deductPoints">deduct Points</a></li>
     <li><a href="#fetchPoints">fetch Points</a></li>
     <li><a href="#contact">Contact</a></li>
+<<<<<<< HEAD
      <li><a href="#acknowledgements">Acknowledgements</a></li>
+=======
+<<<<<<< HEAD
+     <li><a href="#acknowledgements">Acknowledgements</a></li>
+=======
+>>>>>>> 734058824d3e434582ba6abc27477ddc5a94fc11
+>>>>>>> master
 
   </ol>
 </details>
