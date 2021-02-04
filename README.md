@@ -83,7 +83,12 @@ This is an example of how to list things you need to use the software and how to
    * [POSTMAN](https://www.postman.com/downloads/)
 
    ### addPoints
-1. Request Body
+1. EndPoint
+   ```
+   http://localhost:1337/api/addPoints
+   ```
+
+2. Request Body
    ```
    {
     "userId":1,
@@ -94,5 +99,14 @@ This is an example of how to list things you need to use the software and how to
          "points": 700
          }
     ]
+   }
+   ```
+   1.  userId : unique Identifier for a user. all services are developed for one particular user
+   2.  TransactionDetails : Array having payer and points information
+
+3. Response if Succesful of inserting the points to a Particular User
+   ```
+   {
+    "status": 200
    }
    ```
