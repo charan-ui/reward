@@ -1,3 +1,9 @@
+/**
+ * @author Charan H M
+ * @CopyRights Rewards
+ * @Date FEB 4 , 2021
+ */
+
 
 //dependencies
 const router = require("express").Router();
@@ -16,7 +22,7 @@ router.post("/addPoints", async function (req, res) {
     .then(result => {
       res.send(result);
     }).catch(error => {
-      res.status(500).send({message :'error in deduct points service',errorDetails:error});
+      res.status(500).send({ message: 'error in deduct points service', errorDetails: error });
     })
 
 })
