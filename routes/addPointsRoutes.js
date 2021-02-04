@@ -16,7 +16,7 @@ router.post("/addPoints", async function (req, res) {
     .then(result => {
       res.send(result);
     }).catch(error => {
-      res.status(500).send('error in add points service');
+      res.status(500).send({message :'error in deduct points service',errorDetails:error});
     })
 
 })

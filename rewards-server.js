@@ -5,6 +5,7 @@ const helmet = require('helmet');
 
 //custom imports
 const addPointsRoute = require('./routes/addPointsRoutes');
+const deductPointsroute = require('./routes/deductPointsRoute');
 
 
 //app
@@ -30,12 +31,9 @@ app.use(function (err,req,res,next){
   return res.status(500);
 });
 
-
-
-
-
 //routes
 app.use(appContextPath , addPointsRoute);
+app.use(appContextPath,  deductPointsroute );
 
 //starting server
 const server = app.listen(appPort,function(){
