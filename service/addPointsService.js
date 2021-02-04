@@ -10,7 +10,7 @@ const addPointsDao = require('../dao/addPointsdao');
 //loading the transaction Helper file
 const transactionHelper = require('../helpers/transactionHelper');
 
-let postPoints = require('../abc.json');
+
 
 /**
  *
