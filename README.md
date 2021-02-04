@@ -37,6 +37,7 @@
     <li><a href="#addPoints">Add Points</a></li>
     <li><a href="#deductPoints">deduct Points</a></li>
     <li><a href="#fetchPoints">fetch Points</a></li>
+    <li><a href="#contact">Contact</a></li>
 
   </ol>
 </details>
@@ -181,3 +182,8 @@ This is an example of how to list things you need to use the software and how to
     }
    ]
    ```
+
+   ## Contact
+   Name - Charan
+   email - charanhm5991@gmail.com
+   Project Link: [https://github.com/charan-ui/reward.git](https://github.com/charan-ui/reward.git)
