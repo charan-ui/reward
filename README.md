@@ -36,6 +36,8 @@
     <li><a href="#usingtheservices">Using The Services</a></li>
     <li><a href="#addPoints">Add Points</a></li>
     <li><a href="#deductPoints">deduct Points</a></li>
+    <li><a href="#fetchPoints">fetch Points</a></li>
+
   </ol>
 </details>
 
@@ -142,6 +144,40 @@ This is an example of how to list things you need to use the software and how to
         "payer": "DANNON",
         "deductedAmount": -20,
         "deductedTime": "Thu Feb 04 2021 11:42:58 GMT-0500 (EST)"
+    }
+   ]
+   ```
+
+### fetchPoints
+1. EndPoint
+    ```
+   http://localhost:1337/api/fetchPoints/?userId=1
+   ```
+2. http Request Type
+   ```
+   GET
+   ```
+
+3. Response if Succesful fetch of remaining points
+   ```
+   [
+    {
+        "payer": "UNILEVER",
+        "points": 0,
+        "createdAt": "Wed Feb 03 2021 12:37:12 GMT-0500 (EST)",
+        "updatedAt": "Thu Feb 04 2021 02:27:24 GMT-0500 (EST)"
+    },
+    {
+        "payer": "DANNON",
+        "points": 810,
+        "createdAt": "Wed Feb 03 2021 12:32:57 GMT-0500 (EST)",
+        "updatedAt": "Thu Feb 04 2021 02:44:26 GMT-0500 (EST)"
+    },
+    {
+        "payer": "MILLER COORS",
+        "points": 700,
+        "createdAt": "Wed Feb 03 2021 12:42:48 GMT-0500 (EST)",
+        "updatedAt": "Thu Feb 04 2021 11:41:30 GMT-0500 (EST)"
     }
    ]
    ```
