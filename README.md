@@ -41,3 +41,11 @@
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+To Build Web Services for:
+* Adding Points to Reward Wallet
+* Deducting The Points From Reward Wallet
+* Fetching The Points Remaining in Reward wallet
