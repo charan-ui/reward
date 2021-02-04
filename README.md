@@ -33,10 +33,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#usage">Using The Services</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -78,3 +75,9 @@ This is an example of how to list things you need to use the software and how to
    ```
    After This you will see a log on your terminal like this  "Express server listening on port  1337"
    Indicating the the server is ready
+
+   ### usage
+   1. I Use Postman Client to use my REST Web Services , you are allowed to use any API Clients for this
+      Purpose
+      If you Have not Installed Postman on your device Please use the below URL For downloading it
+      * [POSTMAN](https://www.postman.com/downloads/)
