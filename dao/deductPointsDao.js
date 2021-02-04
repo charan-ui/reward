@@ -1,3 +1,10 @@
+/**
+ * @author Charan H M
+ * @CopyRights Rewards
+ * @Date FEB 4 , 2021
+ */
+
+
 //data
 let postPoints = require('../abc.json');
 
@@ -34,9 +41,9 @@ async function sortServiceDataStoreDao(userPosition) {
 async function updateRewardsDao(userPosition, payer, amountDetected) {
   return new Promise(async function (resolve, reject) {
     try {
+      //retrieve index of payer
       const indexOfPayer = postPoints.users[userPosition].transactionDetails.findIndex(every => every.payer === payer);
       postPoints.users[userPosition].transactionDetails[indexOfPayer].points += amountDetected;
-      postPoints.users[userPosition].transactionDetails[indexOfPayer].updatedAt = transactionHelper.transactionDate();
       transactionHelper.writeTransactionDetails(postPoints);
       resolve(true);
     } catch (error) {

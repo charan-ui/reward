@@ -1,3 +1,9 @@
+/**
+ * @author Charan H M
+ * @CopyRights Rewards
+ * @Date FEB 4 , 2021
+ */
+
 //dependencies
 const router = require("express").Router();
 

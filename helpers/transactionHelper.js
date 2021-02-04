@@ -1,3 +1,10 @@
+/**
+ * @author Charan H M
+ * @CopyRights Rewards
+ * @Date FEB 4 , 2021
+ */
+
+
 //import the file model of node
 const fs = require('fs');
 const fileName = 'abc.json'
