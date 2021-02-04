@@ -10,7 +10,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/InviteFriends_withShadow.png" alt="Logo" width="80" height="80">
+    <img src="images/InviteFriends_withShadow.png" alt="Logo" width="160" height="160">
   </a>
 </p>
 
@@ -83,12 +83,16 @@ This is an example of how to list things you need to use the software and how to
    * [POSTMAN](https://www.postman.com/downloads/)
 
    ### addPoints
-1. Request Screen shot
-<br />
-<p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/addPointsRequest.png" alt="Logo" width="600" height="200">
-  </a>
-</p>
-
-   This is a Post Request and Payload required for this is shown in the above Image
+1. Request Body
+   ```
+   {
+    "userId":1,
+    "transactionDetails":
+    [
+        {
+         "payer":"MILLER COORS",
+         "points": 700
+         }
+    ]
+   }
+   ```
